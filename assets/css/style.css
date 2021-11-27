@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+header .menu {
+    width:  30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+header .menu-line{
+    height: 3px;
+    background-color: #333;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+.container .leftside{
+    background-color:#3b576d;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.container .rightside{
+    background-image: url(../imagens/pexels-pixabay-532220.jpg);
+    background-size:cover;
+    background-position:center top;
+   
+    flex: 1;
+}
+.container .info{
+    color: #fff;
+}
+.container .info .profissao{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+.container .info .name{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.container .info .buttons a{
+    display:inline-block;
+    background-color: #fff;
+    color: #3b576d;
+    font-size: 16px;
+    padding:20px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 0px 8px #222 ;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+.container .info .buttons a.light{
+    color: #fff;
+    background-color: #3b576d;
+}
+.container .info .buttons a:hover{
+    opacity: 0.8;
+}
+footer{
+    font-size: 14px;
+    padding: 30px;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 817px){
+    header{
+        position: initial;
+        background-color: #3b576d;
+    }
+    header .menu-line{
+        background-color: #fff;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+    .container .rightside{
+        background-position-y: 15%;
+    }
+    .container .leftside{
+        flex: none;
+        padding: 30px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    footer{
+        background-color: #3b576d;
+        position: initial;
+        color: #fff;
+        font-size: 16px;
+    }
+    footer a {
+        color: #fff;
+    }
+}
+@media (max-width: 450px){
+    .container .leftside .info .name{
+    font-size:40px ;
+    }
+    .container .leftside .info .buttons a{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+       
+    }
+}
