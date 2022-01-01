@@ -12,14 +12,23 @@
 <body>
     <header>
         <div class="logo">Santos.</div>
-        <div class="menu">
+        <aside>
+            <div class="menu" onclick="menuToggle()">
 
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-            <div class="menu-line"></div>
-
-        </div>
-
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            
+            </div>
+            <div id="menu-area" >
+               <ul>
+                   <li>Home</li>
+                   <li>About</li>
+                   <li>Contat</li>
+               </ul>
+            </div>
+        </aside>
+            
     </header>
     <section class="container">
 
@@ -44,6 +53,8 @@
         <p>Developed by &copy;Demilson |My Linkedin:<a href="https://www.linkedin.com/in/demilson-jesus-41b43219b/"
                 target="_blank" rel="external" title=" Access Linkedin"> Linkedin</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

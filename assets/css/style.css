@@ -2,42 +2,91 @@
 
 body {
     margin: 0;
-<<<<<<< HEAD
+
     font-family: 'Bebas Neue','Arial',sans-serif;
-=======
+
     font-family: Arial, Helvetica, sans-serif;
->>>>>>> parent of 17db758 (atualização)
+
 }
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    
-    align-items: center;
+   
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+
+    height: 200px;
+
+    
 }
 
 header .logo {
+    width: 200px;
     color: #fff;
     font-size: 40px;
     font-weight: bold;
 }
 
 header .menu {
-    width:  30px;
+    position:fixed;
+    top:30px;
+
+    z-index:999;
+    display:flex;
+    width:30px;
     height: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+
+    margin-left: -40px;
+
+    
+}
+header #menu-area{
+    width: 0px;
+    height: 100vh;
+    background-color: rgba(175, 175, 175, 0.582);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition:  all ease 2s ;
+    border-radius: 4px 4px;
 
 }
-header .menu-line{
-    height: 4px;
-    background-color: #333;
+.menu-opened {
+    width:200px !important;
+   
 }
+header .menu-line{
+    height: 2px;
+    background-color: white;
+}
+
+ul{
+   padding-top: 30px;
+   color: rgb(90, 90, 90);
+}
+ul li{
+   margin-top: 5px;
+    font-size: 1.3em;
+    font-weight: normal;
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+li{
+    margin-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.89);
+}
+li:hover{
+    background-color: rgb(175, 173, 173);
+}
+
+
 
 .container{
     display: flex;
@@ -92,6 +141,7 @@ header .menu-line{
     color: #fff;
     background-color: #3b576d;
 }
+
 .container .info .buttons a:hover{
     opacity: 0.8;
 }
@@ -114,12 +164,18 @@ footer a:hover{
 
 @media (max-width: 817px){
     header{
+        height: 200px;
         position: initial;
         background-color: #3b576d;
     }
     header .menu-line{
         background-color: #fff;
     }
+    header#menu-area{
+    background-color: rgba(175, 175, 175, 0.582);
+
+    }
+
 
     .container{
         flex-direction: column;
@@ -133,6 +189,7 @@ footer a:hover{
         justify-content: center;
         text-align: center;
     }
+
     footer{
         text-align: center;
         background-color: #3b576d;
@@ -144,14 +201,14 @@ footer a:hover{
         color: #fff;
     }
 }
-@media (max-width: 450px){
+@media (max-width: 479px){
     .container .leftside .info .name{
     font-size:40px ;
     }
     .container .leftside .info .buttons a{
         display: block;
         margin-right: 0;
-        margin-bottom: 20px;
-       
+        margin-bottom: 10px;
+
     }
 }
